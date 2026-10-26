@@ -1,0 +1,23 @@
+Total Sales =
+SUM('supermarket_sales_cleaned'[Total])
+
+Gross Income =
+SUM('supermarket_sales_cleaned'[gross income])
+
+Transaction Count =
+DISTINCTCOUNT('supermarket_sales_cleaned'[Invoice ID])
+
+Units Sold =
+SUM('supermarket_sales_cleaned'[Quantity])
+
+Average Customer Rating =
+AVERAGE('supermarket_sales_cleaned'[Rating])
+
+Average Transaction Value =
+DIVIDE([Total Sales], [Transaction Count], 0)
+
+Gross Margin % =
+DIVIDE([Gross Income], [Total Sales], 0)
+
+Tax Collected =
+SUM('supermarket_sales_cleaned'[Tax 5%])
